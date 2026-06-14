@@ -3,130 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trabajadores | JT Acreditaciones y Gestión</title>
+<title>Trabajadores | Asesoría JT</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#f4f6f9;
-}
-
-header{
-background:#050505;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-color:#d4a017;
-font-size:28px;
-font-weight:bold;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#d4a017;
-}
-
-.container{
-max-width:1200px;
-margin:40px auto;
-padding:20px;
-}
-
-h1{
-margin-bottom:20px;
-color:#050505;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-th{
-background:#050505;
-color:white;
-padding:12px;
-text-align:left;
-}
-
-td{
-padding:12px;
-border-bottom:1px solid #ddd;
-}
-
-.vigente{
-color:green;
-font-weight:bold;
-}
-
-.porvencer{
-color:orange;
-font-weight:bold;
-}
-
-.vencido{
-color:red;
-font-weight:bold;
-}
-
-.btn{
-background:#d4a017;
-color:black;
-padding:8px 14px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#111;color:white}
+header{background:#000;padding:25px 55px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37}
+.logo{font-size:30px;font-weight:bold;color:#d4af37}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:bold}
+nav a:hover{color:#d4af37}
+.contenedor{padding:70px 10%;min-height:80vh}
+h1{color:#d4af37;font-size:42px;margin-bottom:15px}
+p{font-size:19px;line-height:1.6;margin-bottom:30px}
+table{width:100%;border-collapse:collapse;background:#1c1c1c;border:1px solid #d4af37}
+th{background:#000;color:#d4af37;padding:14px;text-align:left}
+td{padding:14px;border-bottom:1px solid #333}
+.vigente{color:#00c853;font-weight:bold}
+.porvencer{color:#ffb300;font-weight:bold}
+.vencido{color:#ff5252;font-weight:bold}
+.btn{background:#d4af37;color:#000;padding:8px 14px;border-radius:5px;text-decoration:none;font-weight:bold}
+footer{background:#000;text-align:center;padding:22px;border-top:2px solid #d4af37}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<div class="logo">
-JT Acreditaciones y Gestión
-</div>
-
+<div class="logo">ASESORÍA JT</div>
 <nav>
 <a href="index.html">Inicio</a>
-<a href="dashboard.html">Dashboard</a>
 <a href="trabajadores.html">Trabajadores</a>
+<a href="contratos.html">Contratos</a>
+<a href="acreditacion.html">Acreditación</a>
+<a href="#">Capacitaciones</a>
+<a href="#">Contacto</a>
 </nav>
-
 </header>
 
-<div class="container">
-
-<h1>Trabajadores Acreditados</h1>
-
-<div class="card">
+<section class="contenedor">
+<h1>Gestión de Trabajadores</h1>
+<p>Registro y control de trabajadores, cargos, faenas, estado laboral y cumplimiento documental.</p>
 
 <table>
-
 <tr>
 <th>RUT</th>
 <th>Nombre</th>
@@ -140,34 +58,34 @@ JT Acreditaciones y Gestión
 <td>18.005.401-4</td>
 <td>Juan Taucare</td>
 <td>Control Documental</td>
-<td>Collahuasi</td>
+<td>CMDIC</td>
 <td class="vigente">Vigente</td>
-<td><a href="#" class="btn">Ver</a></td>
+<td><a href="#" class="btn">Ver ficha</a></td>
 </tr>
 
 <tr>
 <td>15.222.333-1</td>
 <td>Pedro Soto</td>
 <td>Conductor</td>
-<td>QB2</td>
+<td>QB</td>
 <td class="porvencer">Por vencer</td>
-<td><a href="#" class="btn">Ver</a></td>
+<td><a href="#" class="btn">Ver ficha</a></td>
 </tr>
 
 <tr>
 <td>17.888.444-5</td>
 <td>Carlos Díaz</td>
 <td>Operador</td>
-<td>SQM</td>
+<td>CMDIC</td>
 <td class="vencido">Vencido</td>
-<td><a href="#" class="btn">Ver</a></td>
+<td><a href="#" class="btn">Ver ficha</a></td>
 </tr>
-
 </table>
+</section>
 
-</div>
-
-</div>
+<footer>
+© 2026 Asesoría JT - Todos los derechos reservados
+</footer>
 
 </body>
 </html>
