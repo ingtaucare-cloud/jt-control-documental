@@ -92,5 +92,26 @@ footer{background:#000;text-align:center;padding:22px;border-top:2px solid #d4af
 © 2026 Asesoría JT - Todos los derechos reservados
 </footer>
 
-</body>
+<script>
+document.getElementById("buscador").addEventListener("keyup", function() {
+
+    let filtro = this.value.toLowerCase();
+    let filas = document.querySelectorAll("table tr");
+
+    filas.forEach((fila, index) => {
+
+        if(index === 0) return;
+
+        let texto = fila.textContent.toLowerCase();
+
+        if(texto.includes(filtro)) {
+            fila.style.display = "";
+        } else {
+            fila.style.display = "none";
+        }
+
+    });
+
+});
+</script>
 </html>
