@@ -113,6 +113,33 @@ document.getElementById("buscador").addEventListener("keyup", function() {
     });
 
 });
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseUrl = 'https://srjynpzmiogtcqslnlfu.supabase.co';
+
+const supabaseKey =
+'sb_publishable_pV9zEHXN6d9ywzOrP_PUIg_5BMv-ZKS';
+
+const supabase = window.supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+
+async function cargarTrabajadores() {
+
+  const { data, error } = await supabase
+    .from('trabajadores')
+    .select('*');
+
+  console.log(data);
+
+  if(error){
+    console.error(error);
+  }
+}
+
+cargarTrabajadores();
 </script>
   </body>
 </html>
