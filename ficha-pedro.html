@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha Trabajador | Asesoría JT</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#111;color:white}
+header{background:#000;padding:25px 55px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #d4af37}
+.logo{font-size:30px;font-weight:bold;color:#d4af37}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:bold}
+nav a:hover{color:#d4af37}
+.contenedor{padding:60px 10%;min-height:80vh}
+h1{color:#d4af37;font-size:42px;margin-bottom:10px}
+h2{color:#d4af37;margin-top:35px;margin-bottom:15px}
+.card{background:#1c1c1c;border:1px solid #d4af37;border-radius:10px;padding:25px;margin-top:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.item{background:#111;padding:15px;border-radius:8px;border:1px solid #333}
+.item strong{color:#d4af37;display:block;margin-bottom:6px}
+.vigente{color:#00c853;font-weight:bold}
+.proceso{color:#ffb300;font-weight:bold}
+.btn{display:inline-block;background:#d4af37;color:#000;padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:bold;margin-top:25px}
+footer{background:#000;text-align:center;padding:22px;border-top:2px solid #d4af37}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">ASESORÍA JT</div>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="trabajadores.html">Trabajadores</a>
+<a href="contratos.html">Contratos</a>
+<a href="acreditacion.html">Acreditación</a>
+<a href="capacitaciones.html">Capacitaciones</a>
+</nav>
+</header>
+
+<section class="contenedor">
+
+<h1>Ficha del Trabajador</h1>
+<p>Información individual del trabajador y estado documental.</p>
+
+<div class="card">
+<h2>Datos Personales</h2>
+
+<div class="grid">
+<div class="item"><strong>Nombre</strong>Pedro Soto</div>
+<div class="item"><strong>RUT</strong>15.222.333-1</div>
+<div class="item"><strong>Cargo</strong>Conductor</div>
+<div class="item"><strong>Faena</strong>QB</div>
+<div class="item"><strong>Estado Laboral</strong><span class="proceso">Por vencer</span></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Estado Documental</h2>
+
+<div class="grid">
+<div class="item"><strong>Contrato</strong><span class="vigente">Vigente</span></div>
+<div class="item"><strong>Acreditación CMDIC</strong>No aplica</div>
+<div class="item"><strong>Acreditación QB</strong><span class="proceso">En proceso</span></div>
+<div class="item"><strong>Capacitación</strong>Conducción Defensiva</div>
+<div class="item"><strong>Vencimiento</strong>10-08-2026</div>
+</div>
+</div>
+
+<a href="trabajadores.html" class="btn">Volver a Trabajadores</a>
+
+</section>
+
+<footer>
+© 2026 Asesoría JT - Todos los derechos reservados
+</footer>
+
+</body>
+</html>
