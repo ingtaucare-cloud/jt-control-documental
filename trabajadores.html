@@ -49,7 +49,8 @@ footer{background:#000;text-align:center;padding:22px;border-top:2px solid #d4af
 </div>
 <p>Registro y control de trabajadores, cargos, faenas, estado laboral y cumplimiento documental.</p>
 
-<table>
+
+<table id="tablaTrabajadores">
 <tr>
 <th>RUT</th>
 <th>Nombre</th>
@@ -58,33 +59,9 @@ footer{background:#000;text-align:center;padding:22px;border-top:2px solid #d4af
 <th>Estado</th>
 <th>Acción</th>
 </tr>
-
-<tr>
-<td>18.005.401-4</td>
-<td>Juan Taucare</td>
-<td>Control Documental</td>
-<td>CMDIC</td>
-<td class="vigente">Vigente</td>
-<td><a href="#" class="btn">Ver ficha</a></td>
-</tr>
-
-<tr>
-<td>15.222.333-1</td>
-<td>Pedro Soto</td>
-<td>Conductor</td>
-<td>QB</td>
-<td class="porvencer">Por vencer</td>
-<td><a href="ficha-pedro.html" class="btn">Ver ficha</a></td>
-</tr>
-
-<tr>
-<td>17.888.444-5</td>
-<td>Carlos Díaz</td>
-<td>Operador</td>
-<td>CMDIC</td>
-<td class="vencido">Vencido</td>
-<td><a href="#" class="btn">Ver ficha</a></td>
-</tr>
+<tbody id="cuerpoTrabajadores">
+  
+</tbody>
 </table>
 </section>
 
@@ -126,15 +103,32 @@ const supabase = window.supabase.createClient(
 );
 
 async function cargarTrabajadores() {
+
   const { data, error } = await supabase
     .from('trabajadores')
     .select('*');
 
-  console.log('DATOS:', data);
-
   if (error) {
     console.error('ERROR:', error);
+    return;
   }
+
+  const cuerpo = document.getElementById('cuerpoTrabajadores');
+  cuerpo.innerHTML = '';
+
+  data.forEach(trabajador => {
+    cuerpo.innerHTML += `
+      <tr>
+        <td>${trabajador.celo || ''}</td>
+        <td>${trabajador.nombre || ''}</td>
+        <td>${trabajador.cargo || ''}</td>
+        <td>${trabajador.faena || ''}</td>
+        <td>${trabajador.estado_laboral || ''}</td>
+        <td><a href="ficha-pedro.html" class="btn">Ver ficha</a></td>
+      </tr>
+    `;
+  });
+
 }
 
 cargarTrabajadores();
