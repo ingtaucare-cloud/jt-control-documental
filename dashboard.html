@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | JT Acreditaciones y Gestión</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    background:#f4f6f9;
+}
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#050505;
+    color:white;
+    position:fixed;
+    padding:20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo h2{
+    color:#d4a017;
+}
+
+.menu a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    margin-bottom:8px;
+    border-radius:6px;
+}
+
+.menu a:hover{
+    background:#d4a017;
+    color:black;
+}
+
+.main{
+    margin-left:260px;
+    width:100%;
+    padding:30px;
+}
+
+.header{
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.card .numero{
+    font-size:32px;
+    font-weight:bold;
+    color:#d4a017;
+}
+
+.tabla{
+    margin-top:40px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#050505;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.vigente{
+    color:green;
+    font-weight:bold;
+}
+
+.porvencer{
+    color:orange;
+    font-weight:bold;
+}
+
+.vencido{
+    color:red;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<h2>JT Acreditaciones</h2>
+<p>Cumplimiento • Control • Confianza</p>
+</div>
+
+<div class="menu">
+<a href="index.html">Inicio</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="#">Trabajadores</a>
+<a href="#">Documentos</a>
+<a href="#">Acreditaciones</a>
+<a href="#">Vehículos</a>
+<a href="#">Capacitaciones</a>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>Dashboard de Control Documental</h1>
+<p>Gestión de acreditaciones y cumplimiento</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Trabajadores</h3>
+<div class="numero">128</div>
+</div>
+
+<div class="card">
+<h3>Documentos Vigentes</h3>
+<div class="numero">452</div>
+</div>
+
+<div class="card">
+<h3>Por Vencer</h3>
+<div class="numero">18</div>
+</div>
+
+<div class="card">
+<h3>Vencidos</h3>
+<div class="numero">4</div>
+</div>
+
+</div>
+
+<div class="tabla">
+
+<h2>Próximos Vencimientos</h2>
+
+<br>
+
+<table>
+<tr>
+<th>Trabajador</th>
+<th>Documento</th>
+<th>Vencimiento</th>
+<th>Estado</th>
+</tr>
+
+<tr>
+<td>Juan Taucare</td>
+<td>Licencia Conducir</td>
+<td>20/07/2026</td>
+<td class="porvencer">Por vencer</td>
+</tr>
+
+<tr>
+<td>Pedro Soto</td>
+<td>Examen Ocupacional</td>
+<td>15/08/2026</td>
+<td class="vigente">Vigente</td>
+</tr>
+
+<tr>
+<td>Carlos Díaz</td>
+<td>Curso Faena</td>
+<td>01/06/2026</td>
+<td class="vencido">Vencido</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>
